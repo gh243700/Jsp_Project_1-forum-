@@ -39,4 +39,14 @@ public class TopicServlet extends HttpServlet {
     req.setAttribute("topic", topic);
     req.getRequestDispatcher("/JSP/Topic.jsp").forward(req, resp);
   }
+
+  @Override
+  protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+      throws ServletException, IOException {
+    String btn_submit = req.getParameter("btn_submit");
+    if (btn_submit != null && btn_submit.equals("submit")){
+      System.out.println(req.getParameter("content"));
+      return;
+    }
+  }
 }

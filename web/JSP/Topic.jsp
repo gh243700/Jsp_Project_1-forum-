@@ -37,7 +37,7 @@
             <div class="col-md-12">
                 <h1 class="">${requestScope.topic.title}</h1>
                 <p>By ${requestScope.topic.user_id}, ${requestScope.topic.post_date} in
-                    ${requestScope.topic.getCatagory()}  ${requestScope.topic.replies} replies</p>
+                    ${requestScope.topic.getCatagory()} ${requestScope.topic.replies} replies</p>
             </div>
         </section>
         <section class="row mb-4 justify-content-center">
@@ -54,17 +54,31 @@
             <label for="textarea"></label>
         </section>
         <c:if test="${sessionScope.userId != null}">
-            <section class=" mt-4 row align-items-center">
+            <section class="mt-4 row align-items-center">
                 <div class="col-1 ">
                     <p>${sessionScope.username}</p>
                 </div>
-                <textarea
-                        name="content"
-                        class="col-11 form-control textarea-autosize "
-                        style="min-height: 8rem"
-                        id="floating"
-                        rows="5"
-                ></textarea>
+                <div class="col-11">
+                    <form method="post" action="<%=request.getContextPath()%>/topic" class="form-group " id="form">
+                      <textarea name="content"
+                                class="form-control textarea-autosize "
+                                style="min-height: 8rem"
+                                id="floating"
+                                rows="5"
+                      ></textarea>
+                    </form>
+                    <div class="d-flex justify-content-center">
+                        <button
+                                type="submit" name="btn_submit" value="submit"
+                                class="btn btn-danger mr-3"
+                                form="form">Submit
+
+                        </button>
+                        <button type="reset" name="btn_clear" class="btn btn-danger" value="clear"
+                                form="form">Reset
+                        </button>
+                    </div>
+                </div>
             </section>
         </c:if>
     </div>

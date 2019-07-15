@@ -5,9 +5,11 @@ import com.lee.beans.User;
 import com.lee.dao.TopicDAO;
 import com.lee.util.DriverConnectionManager;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Date;
+import java.util.Enumeration;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -29,6 +31,8 @@ public class AddTopicServlet extends HttpServlet {
   @Override
   protected void doPost(HttpServletRequest req, HttpServletResponse resp)
       throws ServletException, IOException {
+
+
     System.out.println("-------do post");
     System.out.println(getClass() + "----------------------DOPOST-----------------");
     String category = req.getParameter("category").replace("-"," ");
