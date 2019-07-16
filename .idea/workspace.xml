@@ -7,22 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f119565b-5827-4edf-9a4e-5f9974242c8c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/lee/beans/TopicReply.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/lee/dao/TopicReplyDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Jsp_Project_Forum_war_exploded/JSP/Topic.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Jsp_Project_Forum_war_exploded/JSP/Topic.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Jsp_Project_Forum_war_exploded/WEB-INF/classes/com/lee/filter/userAuthentication.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Jsp_Project_Forum_war_exploded/WEB-INF/classes/com/lee/filter/userAuthentication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Jsp_Project_Forum_war_exploded/WEB-INF/classes/com/lee/servlet/forum/HomeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Jsp_Project_Forum_war_exploded/WEB-INF/classes/com/lee/servlet/forum/HomeServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Jsp_Project_Forum_war_exploded/WEB-INF/classes/com/lee/servlet/forum/TopicServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Jsp_Project_Forum_war_exploded/WEB-INF/classes/com/lee/servlet/forum/TopicServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Jsp_Project_Forum/com/lee/filter/userAuthentication.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Jsp_Project_Forum/com/lee/filter/userAuthentication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Jsp_Project_Forum/com/lee/servlet/forum/HomeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Jsp_Project_Forum/com/lee/servlet/forum/HomeServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Jsp_Project_Forum/com/lee/servlet/forum/TopicServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Jsp_Project_Forum/com/lee/servlet/forum/TopicServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lee/filter/userAuthentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lee/filter/userAuthentication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lee/servlet/forum/HomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lee/servlet/forum/HomeServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lee/servlet/forum/TopicServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lee/servlet/forum/TopicServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lee/dao/TopicReplyDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lee/dao/TopicReplyDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lee/servlet/UserAccountService/registerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lee/servlet/UserAccountService/registerServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/lee/testMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lee/testMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/JSP/Topic.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/JSP/Topic.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,121 +38,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/lee/servlet/forum/HomeServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/lee/servlet/forum/ForumServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="42" column="22" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/lee/beans/Topic.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="6" column="16" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#440#441#0" expanded="true" />
-                <element signature="e#466#467#0" expanded="true" />
-                <element signature="e#493#494#0" expanded="true" />
-                <element signature="e#519#520#0" expanded="true" />
-                <element signature="e#1065#1066#0" expanded="true" />
-                <element signature="e#1089#1090#0" expanded="true" />
-                <element signature="e#1120#1121#0" expanded="true" />
-                <element signature="e#1142#1143#0" expanded="true" />
-                <element signature="e#1172#1173#0" expanded="true" />
-                <element signature="e#1203#1204#0" expanded="true" />
-                <element signature="e#1252#1253#0" expanded="true" />
-                <element signature="e#1298#1299#0" expanded="true" />
-                <element signature="e#1339#1340#0" expanded="true" />
-                <element signature="e#1371#1372#0" expanded="true" />
-                <element signature="e#1400#1401#0" expanded="true" />
-                <element signature="e#1424#1425#0" expanded="true" />
-                <element signature="e#1456#1457#0" expanded="true" />
-                <element signature="e#1482#1483#0" expanded="true" />
-                <element signature="e#1528#1529#0" expanded="true" />
-                <element signature="e#1564#1565#0" expanded="true" />
-                <element signature="e#1594#1595#0" expanded="true" />
-                <element signature="e#1616#1617#0" expanded="true" />
-                <element signature="e#1656#1657#0" expanded="true" />
-                <element signature="e#1684#1685#0" expanded="true" />
-                <element signature="e#1721#1722#0" expanded="true" />
-                <element signature="e#1750#1751#0" expanded="true" />
-                <element signature="e#1804#1805#0" expanded="true" />
-                <element signature="e#1846#1847#0" expanded="true" />
-                <element signature="e#1878#1879#0" expanded="true" />
-                <element signature="e#1901#1902#0" expanded="true" />
-                <element signature="e#1944#1945#0" expanded="true" />
-                <element signature="e#1974#1975#0" expanded="true" />
-                <element signature="e#2003#2004#0" expanded="true" />
-                <element signature="e#2027#2028#0" expanded="true" />
-                <element signature="e#2068#2069#0" expanded="true" />
-                <element signature="e#2100#2101#0" expanded="true" />
-                <element signature="e#2129#2130#0" expanded="true" />
-                <element signature="e#2151#2152#0" expanded="true" />
-                <element signature="e#2190#2191#0" expanded="true" />
-                <element signature="e#2218#2219#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/JSP/Topic.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="68" column="42" lean-forward="true" selection-start-line="68" selection-start-column="42" selection-end-line="68" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/Integer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="541" selection-start-line="541" selection-end-line="541" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/lee/servlet/forum/TopicServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/lee/dao/TopicReplyDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+            <state relative-caret-position="-63">
+              <caret line="27" column="30" lean-forward="true" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#255#256#0" expanded="true" />
                 <element signature="e#282#283#0" expanded="true" />
-                <element signature="e#381#382#0" expanded="true" />
-                <element signature="e#399#400#0" expanded="true" />
-                <element signature="e#450#451#0" expanded="true" />
-                <element signature="e#468#469#0" expanded="true" />
-                <element signature="e#519#520#0" expanded="true" />
-                <element signature="e#537#538#0" expanded="true" />
+                <element signature="e#1866#1867#0" expanded="true" />
+                <element signature="e#1884#1885#0" expanded="true" />
+                <element signature="e#1935#1936#0" expanded="true" />
+                <element signature="e#1953#1954#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -210,13 +96,59 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/lee/testMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="18" column="64" selection-start-line="18" selection-start-column="64" selection-end-line="18" selection-end-column="64" />
+            <state relative-caret-position="280">
+              <caret line="27" column="11" lean-forward="true" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/css/bootstrap.min.css">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/lee/servlet/UserAccountService/registerServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="362">
+              <caret line="84" column="20" lean-forward="true" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/lee/filter/userAuthentication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="31" column="7" lean-forward="true" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/lee/servlet/UserAccountService/LoginServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="111">
+              <caret line="41" column="40" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/lee/servlet/UserAccountService/LogoutServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="18" column="25" lean-forward="true" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/css/style.css">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -244,7 +176,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/com/lee/servlet/UserAccountService/LogoutServlet.java" />
-        <option value="$PROJECT_DIR$/src/com/lee/servlet/UserAccountService/registerServlet.java" />
         <option value="$PROJECT_DIR$/web/JSP/index.jsp" />
         <option value="$PROJECT_DIR$/web/JSP/header.jsp" />
         <option value="$PROJECT_DIR$/src/com/lee/servlet/UserAccountService/LoginServlet.java" />
@@ -271,8 +202,9 @@
         <option value="$PROJECT_DIR$/src/com/lee/servlet/forum/TopicServlet.java" />
         <option value="$PROJECT_DIR$/src/com/lee/dao/Topic_Reply.java" />
         <option value="$PROJECT_DIR$/src/com/lee/beans/TopicReply.java" />
-        <option value="$PROJECT_DIR$/src/com/lee/dao/TopicReplyDAO.java" />
         <option value="$PROJECT_DIR$/src/com/lee/testMain.java" />
+        <option value="$PROJECT_DIR$/src/com/lee/servlet/UserAccountService/registerServlet.java" />
+        <option value="$PROJECT_DIR$/src/com/lee/dao/TopicReplyDAO.java" />
       </list>
     </option>
   </component>
@@ -355,17 +287,6 @@
               <item name="lee" type="462c0819:PsiDirectoryNode" />
               <item name="servlet" type="462c0819:PsiDirectoryNode" />
               <item name="UserAccountService" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Jsp_Project_1-forum-" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Jsp_Project_1-forum-" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Jsp_Project_1-forum-" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Jsp_Project_1-forum-" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -590,18 +511,18 @@
       <workItem from="1563103355719" duration="1195000" />
       <workItem from="1563151979759" duration="4772000" />
       <workItem from="1563183192134" duration="7271000" />
-      <workItem from="1563243093168" duration="4165000" />
+      <workItem from="1563243093168" duration="8359000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45042000" />
+    <option name="totallyTimeSpent" value="49236000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2729097" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2729097" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -613,7 +534,7 @@
       <window_info id="Web" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49565217" visible="true" weight="0.44233575" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49565217" visible="true" weight="0.07737226" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -623,7 +544,7 @@
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection Results" order="10" sideWeight="0.49966556" visible="true" weight="0.329927" />
       <window_info anchor="bottom" id="CheckStyle" order="11" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5043478" side_tool="true" visible="true" weight="0.44233575" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5043478" side_tool="true" visible="true" weight="0.07737226" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" sideWeight="0.49966556" weight="0.329927" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
       <window_info anchor="bottom" id="Version Control" order="15" />
@@ -644,16 +565,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/web/index.jsp" />
-    <entry file="file://$PROJECT_DIR$/web/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lee/servlet/UserAccountService/LogoutServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="18" column="25" lean-forward="true" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/lee/beans/Parent_Forum.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
@@ -697,13 +608,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
           <caret line="32" column="14" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lee/servlet/UserAccountService/registerServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1596">
-          <caret line="87" column="12" selection-start-line="87" selection-start-column="12" selection-end-line="87" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -880,20 +784,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lee/filter/userAuthentication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="31" column="7" lean-forward="true" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lee/servlet/UserAccountService/LoginServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="41" column="40" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/lee/servlet/forum/ForumServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -1027,28 +917,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lee/testMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="27" column="11" lean-forward="true" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/style.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lee/filter/userAuthentication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="31" column="7" lean-forward="true" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lee/servlet/UserAccountService/LoginServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="41" column="40" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lee/servlet/UserAccountService/LogoutServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="18" column="25" lean-forward="true" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lee/servlet/UserAccountService/registerServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="84" column="20" lean-forward="true" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/lee/dao/TopicReplyDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        <state relative-caret-position="-63">
+          <caret line="27" column="30" lean-forward="true" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#255#256#0" expanded="true" />
             <element signature="e#282#283#0" expanded="true" />
-            <element signature="e#381#382#0" expanded="true" />
-            <element signature="e#399#400#0" expanded="true" />
-            <element signature="e#450#451#0" expanded="true" />
-            <element signature="e#468#469#0" expanded="true" />
-            <element signature="e#519#520#0" expanded="true" />
-            <element signature="e#537#538#0" expanded="true" />
+            <element signature="e#1866#1867#0" expanded="true" />
+            <element signature="e#1884#1885#0" expanded="true" />
+            <element signature="e#1935#1936#0" expanded="true" />
+            <element signature="e#1953#1954#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lee/testMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="18" column="64" selection-start-line="18" selection-start-column="64" selection-end-line="18" selection-end-column="64" />
         </state>
       </provider>
     </entry>

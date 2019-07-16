@@ -50,17 +50,16 @@ public class registerServlet extends HttpServlet {
       connection = new DriverConnectionManager().getConnection();
       UserDao dao = new UserDao(connection);
       boolean checkuserName = dao.CheckifExists(username, "username");
-      boolean checkuserEmail = dao.CheckifExists(email,"email");
+      boolean checkuserEmail = dao.CheckifExists(email, "email");
       if (!checkuserEmail || !checkuserName) {
-         if (!checkuserEmail){
-           String checkEmailMessage = "email already exists";
-           req.setAttribute("checkEmailMessage", checkEmailMessage);
-         }
-         if (!checkuserName){
-           String checkUsernameMessage = "username already exists";
+        if (!checkuserEmail) {
+          String checkEmailMessage = "email already exists";
+          req.setAttribute("checkEmailMessage", checkEmailMessage);
+        }
+        if (!checkuserName) {
+          String checkUsernameMessage = "username already exists";
           req.setAttribute("checkUsernameMessage", checkUsernameMessage);
         }
-
         HashMap<String, Object> values = new HashMap<>();
         values.put("username", username);
         values.put("email", email);
@@ -69,15 +68,14 @@ public class registerServlet extends HttpServlet {
         values.put("password", password);
         values.put("age", age);
         req.setAttribute("data", values);
-         doGet(req,resp);
-      }
-      else{
-        try{
+        doGet(req, resp);
+      } else {
+        try {
           rowsAffected = dao.create(user);
-        }catch (RuntimeException e){
+        } catch (RuntimeException e) {
           e.printStackTrace();
         }
-        System.out.println("rowsAffected"+rowsAffected);
+        System.out.println("rowsAffected" + rowsAffected);
       }
     } catch (SQLException e) {
       e.printStackTrace();
@@ -87,7 +85,7 @@ public class registerServlet extends HttpServlet {
       message = "F";
     } else {
       message = "success";
-      resp.sendRedirect(getServletContext().getInitParameter("uri")+"/home");
+      resp.sendRedirect(getServletContext().getInitParameter("uri") + "/home");
     }
   }
 

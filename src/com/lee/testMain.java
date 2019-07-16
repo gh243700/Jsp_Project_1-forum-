@@ -18,8 +18,6 @@ public class testMain {
   public static void main(String[] args) throws SQLException {
     DriverConnectionManager dcm = new DriverConnectionManager();
     List<TopicReply> list = new TopicReplyDAO(dcm.getConnection()).readAll();
-
-    
     //    String srt = "DIs-ddd";
     //     System.out.println(srt.replace("-","*"));
     //    Parent_forumDAO parent_forumDAO = new Parent_forumDAO(new
