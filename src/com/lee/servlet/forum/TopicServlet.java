@@ -10,6 +10,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class TopicServlet extends HttpServlet {
 
@@ -43,10 +44,13 @@ public class TopicServlet extends HttpServlet {
   @Override
   protected void doPost(HttpServletRequest req, HttpServletResponse resp)
       throws ServletException, IOException {
-    String btn_submit = req.getParameter("btn_submit");
-    if (btn_submit != null && btn_submit.equals("submit")){
-      System.out.println(req.getParameter("content"));
-      return;
-    }
+    HttpSession session =req.getSession();
+    String content = req.getParameter("content");
+    int user_id = (int)session.getAttribute("userId");
+    int topic_id = Integer.parseInt(req.getParameter("topic_id"));
+
+    
+
+
   }
 }

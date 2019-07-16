@@ -59,16 +59,19 @@
                     <p>${sessionScope.username}</p>
                 </div>
                 <div class="col-11">
-                    <form method="post" action="<%=request.getRequestURL()%>" class="form-group " id="form">
-                      <textarea name="content"
-                                class="form-control textarea-autosize "
-                                style="min-height: 8rem"
-                                id="floating"
-                                rows="5"
-                      ></textarea>
+                    <form method="POST" action="<%=request.getContextPath()%>/topic"
+                          class="form-group " id="form">
+                        <input value="${requestScope.topic.id}" name="topic_id" hidden>
+                        <textarea name="content"
+                                  class="form-control textarea-autosize "
+                                  style="min-height: 8rem"
+                                  id="floating"
+                                  rows="5"
+                        ></textarea>
                     </form>
                     <div class="d-flex justify-content-center">
-                        <button type="submit" name="btn_submit" value="submit"
+                        <button
+                                type="submit" name="btn_submit" value="submit"
                                 class="btn btn-danger mr-3"
                                 form="form">Submit
                         </button>

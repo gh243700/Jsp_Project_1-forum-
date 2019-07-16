@@ -35,7 +35,6 @@ public class HomeServlet extends HttpServlet {
     if (forums == null || parent_forums == null) {
       req.getRequestDispatcher("/JSP/ErrorPage.jsp");
     }
-
     req.setAttribute("parent_forums", parent_forums);
     req.setAttribute("forums", forums);
     req.getRequestDispatcher("/JSP/index.jsp").forward(req, resp);

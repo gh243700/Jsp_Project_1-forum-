@@ -21,7 +21,9 @@ public class userAuthentication implements Filter {
       throws IOException, ServletException {
     HttpServletRequest httpRequest = (HttpServletRequest) servletRequest;
     System.out.println(getClass().getName());
-    if (httpRequest.getRequestURI().contains("Add_Topic") || httpRequest.getParameter("do") != null){
+    Boolean url_Add_Topic= httpRequest.getRequestURI().contains("Add_Topic") || httpRequest.getParameter("do") != null;
+    Boolean url_Topic = httpRequest.getRequestURI().contains("topic") && httpRequest.getParameter("btn_submit") != null;
+    if (url_Add_Topic || url_Topic){
       HttpSession session = httpRequest.getSession();
       System.out.println("session_id :"+session.getId());
       if (session.getAttribute("userId") == null || session.getAttribute("username") == null) {
