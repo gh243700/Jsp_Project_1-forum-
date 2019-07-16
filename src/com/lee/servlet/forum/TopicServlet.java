@@ -21,27 +21,15 @@ public class TopicServlet extends HttpServlet {
   @Override
   protected void doGet(HttpServletRequest req, HttpServletResponse resp)
       throws ServletException, IOException {
-    System.out.println("in :" + getClass());
+    System.out.println("doGet()->" + getClass());
 
-    String[] attr = req.getParameter("attr").split("-");
+    TopicDAO topicDAO = (TopicDAO) req.getAttribute("topicDAO");
+    TopicReplyDAO topicReplyDAO = (TopicReplyDAO) req.getAttribute("topicReplyDAO");
 
-    int topic_id = Integer.parseInt(attr[0]);
-    System.out.println(topic_id);
-    TopicDAO topicDAO = null;
-    TopicReplyDAO topicReply = null;
-    RequestDispatcher requestDispatcher_Error = req.getRequestDispatcher("/JSP/ErrorPage.jsp");
-    Topic topic = null;
-    List<TopicReply> topicReplies = null;
-    try {
-      Connection connection = new DriverConnectionManager().getConnection();
-      topicDAO = new TopicDAO(connection);
-      topicReply = new TopicReplyDAO(connection);
-    } catch (SQLException e) {
-      requestDispatcher_Error.forward(req, resp);
-    }
-    topic = topicDAO.readById(topic_id);
-    System.out.println(topic);
+    Topic topic = topicDAO.readById((int)req.getAttribute("topic_id"));
+    List<TopicReply> topicReplyList = topicReplyDAO.readAll((int)req.getAttribute("topic_id"));
 
+    req.setAttribute("topicReplyList",topicReplyList);
     req.setAttribute("topic", topic);
     req.getRequestDispatcher("/JSP/Topic.jsp").forward(req, resp);
   }

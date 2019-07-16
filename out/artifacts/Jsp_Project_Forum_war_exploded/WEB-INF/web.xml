@@ -90,4 +90,13 @@
     <servlet-name>TopicServlet</servlet-name>
     <url-pattern>/topic</url-pattern>
   </servlet-mapping>
+
+  <filter>
+    <filter-name>TopicFilter</filter-name>
+    <filter-class>com.lee.filter.TopicFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>TopicFilter</filter-name>
+    <url-pattern>/topic</url-pattern>
+  </filter-mapping>
 </web-app>

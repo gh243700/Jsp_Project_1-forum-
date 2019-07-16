@@ -53,6 +53,21 @@
             </div>
             <label for="textarea"></label>
         </section>
+        <c:forEach var="topicReply" items="${requestScope.topicReplyList}">
+            <section class="row mb-4 justify-content-center">
+                <div class="col-1">
+                    <img src="" alt=""/>
+                    <h3>${topicReply.user.username}</h3>
+                    <p>302 posts</p>
+                </div>
+                <div class="col-11">
+                    <blackquote class="blackquote">
+                            ${topicReply.content}
+                    </blackquote>
+                </div>
+                <label for="textarea"></label>
+            </section>
+        </c:forEach>
         <c:if test="${sessionScope.userId != null}">
             <section class="mt-4 row align-items-center">
                 <div class="col-1 ">

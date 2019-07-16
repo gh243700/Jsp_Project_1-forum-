@@ -42,21 +42,22 @@ public class TopicReplyDAO extends DataAccessObject<TopicReply> {
         user.setId(resultSet.getInt(6));
         user.setUsername(resultSet.getString(7));
         user.setFirst_name(resultSet.getString(8));
-        user.setEmail(resultSet.getString(9));
-        user.setAge(resultSet.getInt(10));
-        user.setCreated_on(resultSet.getDate(11));
-        user.setLast_login(resultSet.getDate(12));
-        user.setPassword(resultSet.getString(13));
+        user.setLast_name(resultSet.getString(9));
+        user.setEmail(resultSet.getString(10));
+        user.setAge(resultSet.getInt(11));
+        user.setCreated_on(resultSet.getDate(12));
+        user.setLast_login(resultSet.getDate(13));
+        user.setPassword(resultSet.getString(14));
         topicReply.setUser(user);
         Topic topic = new Topic();
-        topic.setId(resultSet.getInt(14));
-        topic.setUser_id(resultSet.getInt(15));
-        topic.setPost_date(resultSet.getDate(16));
-        topic.setTitle(resultSet.getString(17));
-        topic.setMain_content(resultSet.getString(18));
-        topic.setEdited(resultSet.getBoolean(19));
-        topic.setReplies(resultSet.getInt(20));
-        topic.setCatagory(resultSet.getInt(21));
+        topic.setId(resultSet.getInt(15));
+        topic.setUser_id(resultSet.getInt(16));
+        topic.setPost_date(resultSet.getDate(17));
+        topic.setTitle(resultSet.getString(18));
+        topic.setMain_content(resultSet.getString(19));
+        topic.setEdited(resultSet.getBoolean(20));
+        topic.setReplies(resultSet.getInt(21));
+        topic.setCatagory(resultSet.getInt(22));
         topicReply.setTopic(topic);
       }
     } catch (SQLException e) {
@@ -68,16 +69,23 @@ public class TopicReplyDAO extends DataAccessObject<TopicReply> {
 
   @Override
   public List<TopicReply> readAll() {
+    return null;
+  }
+
+  public List<TopicReply> readAll(int p_topic) {
     String sql =
         "SELECT s.id, s.content, s.created, s.p_topic, s.u_id,"
             + "u.id,u.username,u.first_name,u.last_name,u.email,u.age,u.created_on,u.last_login,u.password,"
             + "t.id,t.user_id,t.post_date,t.title,t.main_content,t.edited,t.replies,t.topic_category"
             + " FROM topic_reply AS s"
-            + " JOIN topics AS t ON s.id = t.id"
-            + " JOIN users AS u ON s.u_id = u.id";
+            + " JOIN topics AS t ON s.p_topic = t.id"
+            + " JOIN users AS u ON s.u_id = u.id"
+            + " WHERE s.p_topic = ?";
+
     List<TopicReply> list = new ArrayList<>();
     try {
       PreparedStatement preparedStatement = connection.prepareStatement(sql);
+      preparedStatement.setInt(1, p_topic);
       ResultSet resultSet = preparedStatement.executeQuery();
       while (resultSet.next()) {
         TopicReply topicReply = new TopicReply();
@@ -90,21 +98,22 @@ public class TopicReplyDAO extends DataAccessObject<TopicReply> {
         user.setId(resultSet.getInt(6));
         user.setUsername(resultSet.getString(7));
         user.setFirst_name(resultSet.getString(8));
-        user.setEmail(resultSet.getString(9));
-        user.setAge(resultSet.getInt(10));
-        user.setCreated_on(resultSet.getDate(11));
-        user.setLast_login(resultSet.getDate(12));
-        user.setPassword(resultSet.getString(13));
+        user.setLast_name(resultSet.getString(9));
+        user.setEmail(resultSet.getString(10));
+        user.setAge(resultSet.getInt(11));
+        user.setCreated_on(resultSet.getDate(12));
+        user.setLast_login(resultSet.getDate(13));
+        user.setPassword(resultSet.getString(14));
         topicReply.setUser(user);
         Topic topic = new Topic();
-        topic.setId(resultSet.getInt(14));
-        topic.setUser_id(resultSet.getInt(15));
-        topic.setPost_date(resultSet.getDate(16));
-        topic.setTitle(resultSet.getString(17));
-        topic.setMain_content(resultSet.getString(18));
-        topic.setEdited(resultSet.getBoolean(19));
-        topic.setReplies(resultSet.getInt(20));
-        topic.setCatagory(resultSet.getInt(21));
+        topic.setId(resultSet.getInt(15));
+        topic.setUser_id(resultSet.getInt(16));
+        topic.setPost_date(resultSet.getDate(17));
+        topic.setTitle(resultSet.getString(18));
+        topic.setMain_content(resultSet.getString(19));
+        topic.setEdited(resultSet.getBoolean(20));
+        topic.setReplies(resultSet.getInt(21));
+        topic.setCatagory(resultSet.getInt(22));
         topicReply.setTopic(topic);
         list.add(topicReply);
       }
