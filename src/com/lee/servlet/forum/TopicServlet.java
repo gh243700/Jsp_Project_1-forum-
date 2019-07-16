@@ -26,10 +26,10 @@ public class TopicServlet extends HttpServlet {
     TopicDAO topicDAO = (TopicDAO) req.getAttribute("topicDAO");
     TopicReplyDAO topicReplyDAO = (TopicReplyDAO) req.getAttribute("topicReplyDAO");
 
-    Topic topic = topicDAO.readById((int)req.getAttribute("topic_id"));
-    List<TopicReply> topicReplyList = topicReplyDAO.readAll((int)req.getAttribute("topic_id"));
-
-    req.setAttribute("topicReplyList",topicReplyList);
+    Topic topic = topicDAO.readById((int) req.getAttribute("topic_id"));
+    List<TopicReply> topicReplyList = topicReplyDAO.readAll((int) req.getAttribute("topic_id"));
+    req.setAttribute("topicUri",req.getAttribute("topicUri"));
+    req.setAttribute("topicReplyList", topicReplyList);
     req.setAttribute("topic", topic);
     req.getRequestDispatcher("/JSP/Topic.jsp").forward(req, resp);
   }
@@ -37,9 +37,14 @@ public class TopicServlet extends HttpServlet {
   @Override
   protected void doPost(HttpServletRequest req, HttpServletResponse resp)
       throws ServletException, IOException {
-    HttpSession session =req.getSession();
-    String content = req.getParameter("content");
-    int user_id = (int)session.getAttribute("userId");
-    int topic_id = Integer.parseInt(req.getParameter("topic_id"));
+    System.out.println("doPost()" +getClass().getName());
+    TopicReplyDAO topicReplyDAO = (TopicReplyDAO) req.getAttribute("topicReplyDAO");
+    TopicReply topicReply =(TopicReply) req.getAttribute("topicReply");
+
+    String topicUri =req.getParameter("topicUri");
+
+    topicReplyDAO.create(topicReply);
+    resp.sendRedirect(topicUri);
+
   }
 }

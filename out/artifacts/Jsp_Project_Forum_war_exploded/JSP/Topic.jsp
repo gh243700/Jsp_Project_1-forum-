@@ -76,6 +76,7 @@
                 <div class="col-11">
                     <form method="POST" action="<%=request.getContextPath()%>/topic"
                           class="form-group " id="form">
+                        <input value="${requestScope.topicUri}" name="topicUri" hidden>
                         <input value="${requestScope.topic.id}" name="topic_id" hidden>
                         <textarea name="content"
                                   class="form-control textarea-autosize "
