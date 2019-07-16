@@ -1,10 +1,14 @@
 package com.lee.servlet.forum;
 
 import com.lee.beans.Topic;
+import com.lee.beans.TopicReply;
 import com.lee.dao.TopicDAO;
+import com.lee.dao.TopicReplyDAO;
 import com.lee.util.DriverConnectionManager;
 import java.io.IOException;
+import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -24,17 +28,18 @@ public class TopicServlet extends HttpServlet {
     int topic_id = Integer.parseInt(attr[0]);
     System.out.println(topic_id);
     TopicDAO topicDAO = null;
+    TopicReplyDAO topicReply = null;
     RequestDispatcher requestDispatcher_Error = req.getRequestDispatcher("/JSP/ErrorPage.jsp");
     Topic topic = null;
+    List<TopicReply> topicReplies = null;
     try {
-      topicDAO = new TopicDAO(new DriverConnectionManager().getConnection());
-      topic = topicDAO.readById(topic_id);
-      if (topic == null) {
-        throw new SQLException();
-      }
+      Connection connection = new DriverConnectionManager().getConnection();
+      topicDAO = new TopicDAO(connection);
+      topicReply = new TopicReplyDAO(connection);
     } catch (SQLException e) {
       requestDispatcher_Error.forward(req, resp);
     }
+    topic = topicDAO.readById(topic_id);
     System.out.println(topic);
 
     req.setAttribute("topic", topic);
@@ -48,9 +53,5 @@ public class TopicServlet extends HttpServlet {
     String content = req.getParameter("content");
     int user_id = (int)session.getAttribute("userId");
     int topic_id = Integer.parseInt(req.getParameter("topic_id"));
-
-    
-
-
   }
 }
