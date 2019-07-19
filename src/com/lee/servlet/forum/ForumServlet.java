@@ -1,9 +1,9 @@
 package com.lee.servlet.forum;
 
-import com.lee.beans.Topic;
-import com.lee.dao.ForumDao;
-import com.lee.dao.TopicDAO;
-import com.lee.util.DriverConnectionManager;
+import com.lee.model.Topic;
+import com.lee.repository.ForumRepository;
+import com.lee.repository.TopicRepository;
+import com.lee.repository.util.DriverConnectionManager;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -44,10 +44,10 @@ public class ForumServlet extends HttpServlet {
     String description = null;
     try {
       Connection connection = new DriverConnectionManager().getConnection();
-      TopicDAO topicDAO = new TopicDAO(connection);
-      ForumDao forumDao = new ForumDao(connection);
-      topics = topicDAO.readAll(Integer.parseInt(info[0]), LIMIT, OFFSET);
-      description = forumDao.readById(Integer.parseInt(info[0])).getDescription();
+      TopicRepository topicRepository = new TopicRepository(connection);
+      ForumRepository forumRepository = new ForumRepository(connection);
+      topics = topicRepository.readAll(Integer.parseInt(info[0]), LIMIT, OFFSET);
+      description = forumRepository.readById(Integer.parseInt(info[0])).getDescription();
       // description = topics.get(0).getForum().getDescription();
     } catch (SQLException | RuntimeException e) {
       e.printStackTrace();

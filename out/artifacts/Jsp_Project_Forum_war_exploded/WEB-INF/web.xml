@@ -11,7 +11,7 @@
 
   <servlet>
     <servlet-name>loginServlet</servlet-name>
-    <servlet-class>com.lee.servlet.UserAccountService.LoginServlet</servlet-class>
+    <servlet-class>com.lee.servlet.UserAccountServlet.LoginServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>loginServlet</servlet-name>
@@ -20,12 +20,12 @@
 
   <servlet>
     <servlet-name>LogoutServlet</servlet-name>
-    <servlet-class>com.lee.servlet.UserAccountService.LogoutServlet</servlet-class>
+    <servlet-class>com.lee.servlet.UserAccountServlet.LogoutServlet</servlet-class>
   </servlet>
 
   <filter>
     <filter-name>userAuthentication</filter-name>
-    <filter-class>com.lee.filter.userAuthentication</filter-class>
+    <filter-class>com.lee.servlet.filter.userAuthentication</filter-class>
   </filter>
   <filter-mapping>
     <filter-name>userAuthentication</filter-name>
@@ -39,7 +39,7 @@
 
   <servlet>
     <servlet-name>registerServlet</servlet-name>
-    <servlet-class>com.lee.servlet.UserAccountService.registerServlet</servlet-class>
+    <servlet-class>com.lee.servlet.UserAccountServlet.registerServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>registerServlet</servlet-name>
@@ -93,7 +93,7 @@
 
   <filter>
     <filter-name>TopicFilter</filter-name>
-    <filter-class>com.lee.filter.TopicFilter</filter-class>
+    <filter-class>com.lee.servlet.filter.TopicFilter</filter-class>
   </filter>
   <filter-mapping>
     <filter-name>TopicFilter</filter-name>

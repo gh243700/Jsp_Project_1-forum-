@@ -1,10 +1,10 @@
 package com.lee.servlet.forum;
 
-import com.lee.beans.Forum;
-import com.lee.beans.Parent_Forum;
-import com.lee.dao.ForumDao;
-import com.lee.dao.Parent_forumDAO;
-import com.lee.util.DriverConnectionManager;
+import com.lee.model.Forum;
+import com.lee.model.Parent_Forum;
+import com.lee.repository.ForumRepository;
+import com.lee.repository.ParentForumRepository;
+import com.lee.repository.util.DriverConnectionManager;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -25,10 +25,10 @@ public class HomeServlet extends HttpServlet {
     List<Parent_Forum> parent_forums = null;
     try {
       Connection connection = new DriverConnectionManager().getConnection();
-      Parent_forumDAO parent_forumDAO = new Parent_forumDAO(connection);
-      ForumDao forumDAO = new ForumDao(connection);
-      parent_forums = parent_forumDAO.readAll();
-      forums = forumDAO.readAll();
+      ParentForumRepository parent_forumRepository = new ParentForumRepository(connection);
+      ForumRepository forumRepository = new ForumRepository(connection);
+      parent_forums = parent_forumRepository.readAll();
+      forums = forumRepository.readAll();
     } catch (SQLException e) {
       req.getRequestDispatcher("/JSP/ErrorPage.jsp");
     }

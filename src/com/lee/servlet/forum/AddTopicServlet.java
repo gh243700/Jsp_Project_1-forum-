@@ -1,15 +1,13 @@
 package com.lee.servlet.forum;
 
-import com.lee.beans.Topic;
-import com.lee.beans.User;
-import com.lee.dao.TopicDAO;
-import com.lee.util.DriverConnectionManager;
+import com.lee.model.Topic;
+import com.lee.model.User;
+import com.lee.repository.TopicRepository;
+import com.lee.repository.util.DriverConnectionManager;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Date;
-import java.util.Enumeration;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -53,9 +51,9 @@ public class AddTopicServlet extends HttpServlet {
     int checkIfSuccess = 0;
     try {
       connection = new DriverConnectionManager().getConnection();
-      TopicDAO topicDAO = new TopicDAO(connection);
+      TopicRepository topicRepository = new TopicRepository(connection);
       if (topic != null) {
-        checkIfSuccess = topicDAO.create(topic);
+        checkIfSuccess = topicRepository.create(topic);
       }
     } catch (SQLException e) {
       e.printStackTrace();
